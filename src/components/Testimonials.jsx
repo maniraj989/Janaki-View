@@ -55,10 +55,10 @@ export default function Testimonials() {
 
         {/* Testimonial Carousel Area */}
         <div className="testimonial-wrapper">
-          {/* Prev Button */}
+          {/* Prev Button (Desktop) */}
           <button
             type="button"
-            className="testimonial-nav-btn prev-btn"
+            className="testimonial-nav-btn prev-btn desktop-only-btn"
             onClick={prevReview}
             aria-label="Previous Testimonial"
           >
@@ -97,12 +97,35 @@ export default function Testimonials() {
                 ))}
               </div>
             </div>
+
+            {/* Mobile Controls Inside/Below Card */}
+            <div className="testimonial-mobile-nav">
+              <button
+                type="button"
+                className="testimonial-nav-btn"
+                onClick={prevReview}
+                aria-label="Previous Testimonial"
+              >
+                <ChevronLeft size={18} />
+              </button>
+              <span className="testimonial-page-indicator">
+                {currentIndex + 1} / {reviews.length}
+              </span>
+              <button
+                type="button"
+                className="testimonial-nav-btn"
+                onClick={nextReview}
+                aria-label="Next Testimonial"
+              >
+                <ChevronRight size={18} />
+              </button>
+            </div>
           </div>
 
-          {/* Next Button */}
+          {/* Next Button (Desktop) */}
           <button
             type="button"
-            className="testimonial-nav-btn next-btn"
+            className="testimonial-nav-btn next-btn desktop-only-btn"
             onClick={nextReview}
             aria-label="Next Testimonial"
           >
