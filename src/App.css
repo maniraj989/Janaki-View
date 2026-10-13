@@ -68,10 +68,16 @@ html, body {
 }
 
 .header-logo-img {
-  height: 48px;
+  height: 42px;
   width: auto;
   object-fit: contain;
   transition: height 0.2s;
+}
+
+@media (min-width: 480px) {
+  .header-logo-img {
+    height: 48px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -136,8 +142,8 @@ html, body {
 }
 
 .header-book-btn {
-  font-size: 12px;
-  padding: 7px 12px;
+  font-size: 11.5px;
+  padding: 6px 10px;
   border-radius: 4px;
   display: inline-flex;
   align-items: center;
@@ -148,7 +154,15 @@ html, body {
   white-space: nowrap;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 420px) {
+  .header-book-btn {
+    font-size: 13px;
+    padding: 8px 14px;
+    gap: 6px;
+  }
+}
+
+@media (min-width: 768px) {
   .header-book-btn {
     font-size: 13.5px;
     padding: 9px 18px;
@@ -1169,12 +1183,12 @@ html, body {
 }
 
 .desktop-only-btn {
-  display: none;
+  display: none !important;
 }
 
 @media (min-width: 680px) {
   .desktop-only-btn {
-    display: flex;
+    display: flex !important;
   }
 }
 
